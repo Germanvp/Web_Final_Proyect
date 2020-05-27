@@ -1,1 +1,5 @@
 server/node_modules
+server/src/firebaseConfig.js
+server/src/web-final-76d71-firebase-adminsdk-ve33q-3ded03c18d.json
+.vscode/
+.DS_Store
