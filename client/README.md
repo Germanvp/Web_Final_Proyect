@@ -1,6 +1,6 @@
 # client
 
-> A Vue.js project
+> Laboratorio de Web Vue
 
 ## Build Setup
 
