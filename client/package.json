@@ -10,7 +10,9 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress",
+    "heroku-prebuild": "npm install --dev"
   },
   "dependencies": {
     "axios": "^0.19.2",
