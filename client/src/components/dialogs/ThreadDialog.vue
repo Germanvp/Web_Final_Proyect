@@ -61,10 +61,10 @@
         <v-card-title v-else>Task was completed on {{new Date(this.row.item.completedDate)}}</v-card-title>
         <newUpdate :thread="this.row.item.thread_ref"></newUpdate>
         <v-container height = "100%" justify="center" width = "100%"> 
-          <v-row v-for="update in updates" :key="update.description" >
+          <v-row id ="vContainer" v-for="update in updates" :key="update.description" >
             <v-card
               max-width="100%"
-              width="70%"
+              id = "updateCard"
             >
               <v-img
                 :src="update.img"
@@ -82,10 +82,10 @@
             </v-card>
             <v-card
               max-width="100%"
-              width="30%"
               scrollable
+              id="commentsListId"
             >
-              <v-list >
+              <v-list>
                 <v-list-item v-for="comment in update.comments_list " :key="comment.text">
                   <v-list-item-avatar>
                     <v-img 
@@ -263,5 +263,28 @@
   position: relative;
   padding-bottom: 50px;
 }
+
+ #updateCard {
+   width: 70%
+ }
+
+ #commentsListId {
+   width: 30%
+ }
+
+@media screen and (max-width: 850px) {
+ #vContainer {
+   flex-direction: column;
+ }
+
+ #updateCard {
+   width: 100%
+ }
+
+ #commentsListId {
+   width: 100%
+ }
+}
+
 
 </style>

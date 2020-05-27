@@ -9,21 +9,26 @@
           vertical
         ></v-divider>
       <v-spacer></v-spacer>
-      <v-row>
-      <v-select
-        :items="['description', 'userName',
-        'teamName', 'name']"
-        v-model="filterValue"
-      ></v-select>
-      <v-spacer></v-spacer>
-      <v-text-field
-        v-model="search"
-        append-icon="mdi-magnify"
-        label="Search"
-        single-line
-        hide-details
-      ></v-text-field>
-      <v-spacer></v-spacer>
+      <v-row >
+        <v-col width="50%">
+        <v-select
+          :items="['description', 'userName',
+          'teamName', 'name']"
+          v-model="filterValue"
+        ></v-select>
+        </v-col>
+        <v-spacer></v-spacer>
+        <v-col width="50%">
+          <v-text-field
+            width="50%"
+            v-model="search"
+            append-icon="mdi-magnify"
+            label="Search"
+            single-line
+            hide-details
+          ></v-text-field>
+        </v-col>
+        <v-spacer></v-spacer>
       </v-row>
       <goal-dialog></goal-dialog>
     </v-card-title>

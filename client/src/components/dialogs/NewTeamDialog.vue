@@ -33,20 +33,20 @@
                     <v-text-field
                     v-model="teamMember"
                     label="Team members"
+                    width="70%"
                     ></v-text-field>
-                    <v-btn @click="members.push(teamMember)">Add to list</v-btn>
-                    <v-text>{{members}}</v-text>
+                    <v-btn width="30%" @click="members.push(teamMember)">Add to list</v-btn>
                </v-col>
             </v-list-item-content>
           </v-list-item>
           <v-list-item>
             <v-list-item-content>
               <v-col class="d-flex">
-                <v-switch v-model="public_goal" class="mx-2" label="Public Team">
-                </v-switch>
+                    <v-text>{{members}}</v-text>
                </v-col>
             </v-list-item-content>
           </v-list-item>
+
         </v-list>
         <v-divider></v-divider>
         <v-list three-line subheader>
