@@ -12,7 +12,6 @@
     "test": "npm run unit && npm run e2e",
     "build": "node build/build.js",
     "heroku-prebuild": "npm install --dev",
-    "postinstall": "webpack -p"
   },
   "dependencies": {
     "axios": "^0.19.2",
