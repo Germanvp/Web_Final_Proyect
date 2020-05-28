@@ -1,12 +1,21 @@
 <template>
   <div>
     <h1>Welcome to untitled</h1>
-    <div class="b-div">
+    <div class="b-div-2">
           <v-btn x-large to="/login">Login</v-btn>
     </div>
     <div class="b-div" >
           <v-btn x-large to="/register">Register</v-btn>
     </div>
+    <div>
+    <h2>What is this thing?</h2>
+    <p>Untitled is a service used by people to
+        post what they are currently working and offer advice, help, or simply support other people. Users
+        can see other users goals and comment on them.</p>
+    <h2>Why?</h2>
+    <p>This project will allow individuals/teams have an organized way
+        of keeping track of what they want to achieve.</p>
+  </div>
     <img class = "ola" src="@/assets/ola.png" />
   </div>
 </template>
@@ -24,10 +33,22 @@ h1 {
   margin-top: 25px;
 }
 
+p {
+  margin-bottom: 40px;
+}
+
 .b-div {
   padding: 10px;
   width: 100%;
   align-content: center;
+}
+
+.b-div {
+  padding: 10px;
+  width: 100%;
+  align-content: center;
+  margin-bottom: 70px;
+
 }
 
 .v-btn {
