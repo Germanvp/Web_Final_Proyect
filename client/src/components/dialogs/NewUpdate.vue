@@ -81,7 +81,7 @@ export default {
 
             let resp = await ThreadService.updateThread(this.thread, data)
             .then(resp => {
-              alert(resp);
+              alert("Updated goal's thread");
             })
             .catch(err => {
               alert(err);

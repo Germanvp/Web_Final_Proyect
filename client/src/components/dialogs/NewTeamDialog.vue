@@ -103,8 +103,13 @@
           }
 
           console.log(data)
-          let resp = await TeamService.postTeam(data);
-          console.log(resp)
+          let response = await TeamService.postTeam(data)
+          .then(resp => {
+            alert("Team created")
+          })
+          .catch(err => {
+            alert(err);
+          })
 
           this.dialog = false;
         },

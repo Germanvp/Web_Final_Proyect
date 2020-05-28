@@ -78,7 +78,7 @@
             }
           })
           .then(resp => {
-            alert(resp);
+            alert("You can see the comment in the update now.");
           })
           .catch(err => {
             alert(resp);

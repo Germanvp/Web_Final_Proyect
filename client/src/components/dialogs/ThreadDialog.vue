@@ -193,7 +193,8 @@
         console.log("D", comment)
         const resp = await UpdateService.patchUpdate(update_id, comment)
         .then(resp => {
-          alert(resp);
+          alert("Your comment is submitted and waiting for approval");
+          this.newComment = ""
         })
         .catch(err => {
           alert(err);
@@ -203,6 +204,11 @@
 
       },
       async deleteGoal(){
+        if (!this.row.item.id) {
+          alert("To delete goals visit Local section")
+          return;
+        }
+
         const data = {
             headers: {
               uid: localStorage.user_id
@@ -213,7 +219,7 @@
         const response = await GoalService.deleteGoal(this.row.item.id, data)
         .then(resp => {
           if(resp.status == 202){
-                alert("Deleted goal")
+              alert("Deleted goal. Reload to show results")
           }
           console.log(resp)
         })

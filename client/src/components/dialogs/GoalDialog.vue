@@ -115,7 +115,7 @@
           GoalsService.postGoal(goal, {})
           .then(res => {
             console.log(res)
-            alert("Goal saved succesfully")
+            alert("Goal saved succesfully. Reload needed to show new goal")
             this.dialog = false
           })
           .catch(err => {
