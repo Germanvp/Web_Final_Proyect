@@ -30,6 +30,20 @@ const webpackConfig = merge(baseWebpackConfig, {
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
+    debug
+  ? [
+      new ExtractTextPlugin("dist/styles/main.css", {
+        allChunks: true
+      })
+    ]
+  : [
+      new ExtractTextPlugin("dist/styles/main.css", {
+        allChunks: true
+      }),
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false })
+    ],
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
@@ -122,16 +136,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     ])
   ]
 })
-
-const developmentConfig = {
-  devtool: 'cheap-module-inline-source-map',
-  plugins: [HtmlWebpackPluginConfig, new ExtractTextPlugin("main.css")]
-};
-
-const productionConfig = {
-  devtool: 'cheap-module-source-map',
-  plugins: [HtmlWebpackPluginConfig, new ExtractTextPlugin("main.css"), productionPlugin]
-};
 
 if (config.build.productionGzip) {
   const CompressionWebpackPlugin = require('compression-webpack-plugin')
