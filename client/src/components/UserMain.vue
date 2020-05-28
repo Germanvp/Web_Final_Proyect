@@ -45,6 +45,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.button1 {
+  color: white;
+}
+
+.button2 {
+  color: white;
+}
+
 h1 {
   color: white;
   margin-top: 25px;
@@ -65,10 +73,7 @@ h1 {
    }
 }
 
-
-
 .v-btn {
-  color: none;
   width: 20%;
   color: white
 }
