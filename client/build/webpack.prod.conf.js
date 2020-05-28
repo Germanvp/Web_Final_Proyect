@@ -120,7 +120,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-    HtmlWebpackPlugin, new ExtractTextPlugin("main.css"), productionPlugin,
+    HtmlWebpackPlugin, new ExtractTextPlugin("main.css"),
 
   ]
 })
