@@ -123,6 +123,16 @@ const webpackConfig = merge(baseWebpackConfig, {
   ]
 })
 
+const developmentConfig = {
+  devtool: 'cheap-module-inline-source-map',
+  plugins: [HtmlWebpackPluginConfig, new ExtractTextPlugin("main.css")]
+};
+
+const productionConfig = {
+  devtool: 'cheap-module-source-map',
+  plugins: [HtmlWebpackPluginConfig, new ExtractTextPlugin("main.css"), productionPlugin]
+};
+
 if (config.build.productionGzip) {
   const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
