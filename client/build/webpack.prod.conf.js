@@ -30,7 +30,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
-    HtmlWebpackPluginConfig, new ExtractTextPlugin("main.css"), productionPlugin,
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
@@ -120,7 +119,9 @@ const webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    HtmlWebpackPlugin, new ExtractTextPlugin("main.css"), productionPlugin,
+
   ]
 })
 
