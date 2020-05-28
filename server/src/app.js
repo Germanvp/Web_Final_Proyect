@@ -639,6 +639,8 @@ app.listen(process.env.PORT || 8081, () => {
     new Promise((resolve, reject) => {
         var serviceAccount = require("./web-final-76d71-firebase-adminsdk-ve33q-3ded03c18d.json");
 
+        serviceAccount.private_key = process.env.ADMIN_API_KEY
+        serviceAccount.private_key_id = process.env.PRIVATE_KEY_ID
         admin.initializeApp({
             credential: admin.credential.cert(serviceAccount),
             databaseURL: "https://web-final-76d71.firebaseio.com"
