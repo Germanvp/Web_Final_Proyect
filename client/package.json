@@ -5,15 +5,14 @@
   "author": "German",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.prod.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.prod.conf.js",
     "start": "node server.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "build": "node build/build.js",
     "heroku-prebuild": "npm install --dev",
-    "heroku-postbuild": "npm build",
-    "postinstall": "npm run dev"
+    "heroku-postbuild": "webpack -p"
   },
   "dependencies": {
     "@mdi/font": "^5.1.45",
