@@ -29,21 +29,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
+/*
   plugins: [
-    debug
-  ? [
-      new ExtractTextPlugin("dist/styles/main.css", {
-        allChunks: true
-      })
-    ]
-  : [
-      new ExtractTextPlugin("dist/styles/main.css", {
-        allChunks: true
-      }),
-      new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.OccurenceOrderPlugin(),
-      new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false })
-    ],
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
@@ -134,7 +121,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ])
-  ]
+  ]*/
 })
 
 if (config.build.productionGzip) {
