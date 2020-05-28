@@ -95,7 +95,7 @@
 
                   <v-list-item-content>
                     <v-list-item-title >{{comment.userName}}</v-list-item-title>
-                    <v-list-item-subtitle>{{comment.text}}</v-list-item-subtitle>
+                    <v-list-item-subtitle class ="text-wrap">{{comment.text}}</v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item>
                 <v-divider></v-divider>
