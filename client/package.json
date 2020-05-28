@@ -11,8 +11,7 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "build": "node build/build.js",
-    "heroku-prebuild": "npm install --dev",
-    "heroku-postbuild": "webpack --config webpack.prod.js"
+    "heroku-prebuild": "npm install --dev"
   },
   "dependencies": {
     "axios": "^0.19.2",
