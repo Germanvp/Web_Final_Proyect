@@ -19,3 +19,53 @@ Once you register and log in you will be redirected to this section. In the tool
 ## My user id / Team id
 As you can see in the top section there is a text that says "My user id: XXXX", use this id so other users can add you to their team. Team also have ids, you can check your team's id in the Team section.
 Also when you create a goal you will be asked a Team, add the id of your team to asign that goal to every member of the team. 
+
+## Technologies used
+Client: Vue with Vuetify
+Server: Node.js with Express
+Database: Firebase (includes authentication)
+
+## Firebase Schema
+- Comments
+	- date
+	- is_approved
+	- text
+	- user
+	- userName
+- Goal
+	- completedDate
+	- description
+	- end
+	- is_complete
+	- is_public
+	- name
+	- start
+	- teamName
+	- team_ref
+	- thread_ref
+	- userName
+	- user_ref[]
+- Notifications
+	- comment_id
+	- comment_text
+	- is_approved
+	- type
+	- userFrom
+	- userTo
+
+- Teams
+	- description
+	- name
+	- users_ref[]
+
+- Threads
+	- updates[]
+
+- Updates
+	- comments[]
+	- description
+	- img
+	- user
+	- userName
+
+
